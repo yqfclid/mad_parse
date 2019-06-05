@@ -41,7 +41,9 @@ parse_body([H|T], Acc) ->
 
 do_transform({call, Line, {remote, _Line1, {atom, _Line2, os},
                                            {atom, _Line3, timestamp}}, _Arguments0}) ->
-    {atom, Line, 0};
+    {tuple, Line, [{integer, Line, 0}, 
+                   {integer, Line, 0}, 
+                   {integer, Line, 0}]};
 do_transform(Stmt) when is_tuple(Stmt) ->
     list_to_tuple(do_transform(tuple_to_list(Stmt)));
 do_transform(Stmt) when is_list(Stmt) ->

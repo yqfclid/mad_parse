@@ -14,4 +14,4 @@
 
 mad_parse_test_() ->
     Time = os:timestamp(),
-    ?_assertEqual(0, Time).
+    ?_assertEqual({0, 0, 0}, Time).
