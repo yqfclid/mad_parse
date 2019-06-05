@@ -1,7 +1,7 @@
 ## fault parse 
 
 ### usage
-* add following option to comile flags
+* add following option to compile flags
 ```
     {parse_transform, mad_parse}
 ```
